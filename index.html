@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Servicios Futuristas de Redes Sociales</title>
+  <title>DTS Pulso Inc</title>
   <link rel="stylesheet" href="styles.css">
   <!-- Fuentes e Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
@@ -25,8 +25,10 @@
     <div class="container">
       <h1>La frecuencia exacta entre tu marca y tú comunidad</h1>
       <p>Impulsa tu marca al siguiente nivel digital.</p>
+      <canvas id="particles"></canvas>
     </div>
   </header>
+
 
   <!-- Seccion de Paquetes -->
   <section id="packages" class="packages container">
@@ -89,41 +91,6 @@
   </footer>
 
   <!-- JavaScript para interactividad extra -->
-  <script>
-    // Efecto visual al hacer clic en los botones
-    const buttons = document.querySelectorAll('.btn');
-    buttons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        btn.classList.add('clicked');
-        setTimeout(() => btn.classList.remove('clicked'), 300);
-      });
-    });
-
-    // Enviar mensaje personalizado a WhatsApp
-    const contactForm = document.getElementById('contactForm');
-    contactForm.addEventListener('submit', function(e) {
-      e.preventDefault();
-      const userMessage = document.getElementById('userMessage').value;
-      const baseUrl = 'https://api.whatsapp.com/send?phone=3502161217&text=';
-      const message = encodeURIComponent('¡Hola! Me gustaría saber más. \n' + userMessage);
-      window.open(baseUrl + message, '_blank');
-    });
-
-    // Animaciones de deslizamiento
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('slide-in');
-        } else {
-          entry.target.classList.remove('slide-in');
-        }
-      });
-    }, { threshold: 0.1 });
-
-    const packages = document.querySelectorAll('.package');
-    packages.forEach(package => {
-      observer.observe(package);
-    });
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
