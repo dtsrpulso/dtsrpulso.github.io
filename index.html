@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Servicios Futuristas de Redes Sociales</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Fuentes e Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">DTS Pulso Inc</a>
+      <ul class="nav-links">
+        <li><a href="#packages">Paquetes</a></li>
+        <li><a href="#contact">Contacto</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Encabezado -->
+  <header class="header">
+    <div class="container">
+      <h1>La frecuencia exacta entre tu marca y tú comunidad</h1>
+      <p>Impulsa tu marca al siguiente nivel digital.</p>
+    </div>
+  </header>
+
+  <!-- Seccion de Paquetes -->
+  <section id="packages" class="packages container">
+    <!-- Paquete Basico -->
+    <div class="package">
+      <h2>Paquete Basico</h2>
+      <ul>
+        <li>Gestion de 1-2 redes sociales</li>
+        <li>Publicaciones programadas (3-5 posts semanales)</li>
+        <li>Reporte mensual basico</li>
+        <li>Ideal para empresas emergentes</li>
+      </ul>
+      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Basico%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
+    </div>
+
+    <!-- Paquete Intermedio -->
+    <div class="package">
+      <h2>Paquete Intermedio</h2>
+      <ul>
+        <li>Gestion de hasta 3 redes sociales</li>
+        <li>Contenido personalizado</li>
+        <li>Publicaciones diarias segun plataforma</li>
+        <li>Gestion de comunidad activa</li>
+        <li>Reporte quincenal con insights</li>
+        <li>Recomendado para empresas en crecimiento</li>
+      </ul>
+      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Intermedio%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
+    </div>
+
+    <!-- Paquete Premium -->
+    <div class="package">
+      <h2>Paquete Premium</h2>
+      <ul>
+        <li>Gestion integral de redes sociales</li>
+        <li>Estrategia de contenido avanzada</li>
+        <li>Publicidad pagada (ads)</li>
+        <li>Monitorizacion en tiempo real</li>
+        <li>Reporte semanal detallado</li>
+        <li>Orientado a grandes marcas</li>
+      </ul>
+      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Premium%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
+    </div>
+  </section>
+
+  <!-- Seccion de Contacto -->
+  <section id="contact" class="contact container">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas o necesitas más información? Completa el formulario para enviarnos un mensaje directo por WhatsApp.</p>
+    <form id="contactForm">
+      <textarea id="userMessage" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit" class="btn">Enviar Mensaje</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2023 TuEmpresa. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- JavaScript para interactividad extra -->
+  <script>
+    // Efecto visual al hacer clic en los botones
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        btn.classList.add('clicked');
+        setTimeout(() => btn.classList.remove('clicked'), 300);
+      });
+    });
+
+    // Enviar mensaje personalizado a WhatsApp
+    const contactForm = document.getElementById('contactForm');
+    contactForm.addEventListener('submit', function(e) {
+      e.preventDefault();
+      const userMessage = document.getElementById('userMessage').value;
+      const baseUrl = 'https://api.whatsapp.com/send?phone=3502161217&text=';
+      const message = encodeURIComponent('¡Hola! Me gustaría saber más. \n' + userMessage);
+      window.open(baseUrl + message, '_blank');
+    });
+
+    // Animaciones de deslizamiento
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('slide-in');
+        } else {
+          entry.target.classList.remove('slide-in');
+        }
+      });
+    }, { threshold: 0.1 });
+
+    const packages = document.querySelectorAll('.package');
+    packages.forEach(package => {
+      observer.observe(package);
+    });
+  </script>
+</body>
+</html>

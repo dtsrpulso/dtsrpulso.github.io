@@ -1,0 +1,244 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos base y fuente */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+  line-height: 1.6;
+}
+
+/* Contenedor central */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Navbar */
+.navbar {
+  background-color: #1c1c1e;
+  padding: 10px 20px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #a4508b;
+  text-decoration: none;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+}
+
+.navbar .nav-links li {
+  margin-left: 20px;
+}
+
+.navbar .nav-links a {
+  color: #e0e0e0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #a4508b;
+}
+
+/* Encabezado */
+.header {
+  background: linear-gradient(135deg, #2b1055, #5d2a8c);
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 40px;
+  box-shadow: 0 0 20px rgba(93,42,140,0.7);
+}
+
+.header h1 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 1.2rem;
+}
+
+/* Paquetes */
+.packages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.package {
+  background: #1c1c1e;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+  padding: 30px;
+  width: 100%;
+  max-width: 350px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid transparent;
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.package:hover {
+  transform: translateY(-10px);
+  border: 1px solid #5d2a8c;
+}
+
+/* Titulos de paquete */
+.package h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #a4508b;
+}
+
+/* Lista de detalles */
+.package ul {
+  list-style-type: none;
+  margin: 15px 0;
+  padding-left: 20px;
+}
+
+.package li {
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.package li:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  background: #5d2a8c;
+  border-radius: 50%;
+}
+
+/* Boton */
+.btn {
+  background: linear-gradient(45deg, #5d2a8c, #a4508b);
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #a4508b, #5d2a8c);
+  transform: scale(1.05);
+}
+
+.btn.clicked {
+  transform: scale(0.95);
+}
+
+/* Sección contacto */
+.contact {
+  padding: 60px 20px;
+  background: #121212;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #bb86fc;
+}
+
+.contact p {
+  margin-bottom: 20px;
+  color: #e0e0e0;
+}
+
+.contact form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #3a3a3a;
+  border-radius: 5px;
+  background: #2c2c2c;
+  color: #e0e0e0;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+  color: #aaa;
+}
+
+.contact btn {
+  padding: 10px;
+  background: #bb86fc;
+  color: #121212;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.contact btn:hover {
+  background: #3700b3;
+}
+
+/* Footer */
+.footer {
+  background-color: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+/* Animaciones */
+.slide-in {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .packages {
+    flex-direction: column;
+    align-items: center;
+  }
+}
