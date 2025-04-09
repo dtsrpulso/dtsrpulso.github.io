@@ -139,20 +139,21 @@ body {
 }
 
 .package .bonus, .package .advantage {
-  background-color: #333;
-  color: #ffffff;
-  padding: 15px;
-  border-radius: 8px;
-  margin-top: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-weight: bold;
-  text-align: center;
+  background-color: #333 !important; /* Forzar aplicación con !important */
+  color: #ffffff !important;
+  padding: 15px !important;
+  border-radius: 8px !important;
+  margin-top: 15px !important;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3) !important;
+  font-weight: bold !important;
+  text-align: center !important;
 }
 
 .package .bonus::before, .package .advantage::before {
   content: "⭐ ";
-  color: #ffdd57;
+  color: #ffdd57 !important;
 }
+
 
 
 .package:hover {
