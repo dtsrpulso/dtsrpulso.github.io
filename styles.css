@@ -129,10 +129,24 @@ body {
 }
 
 .package h2 {
-  color: #ff6f61; /* Un color coral atractivo */
+  font-family: 'Orbitron', sans-serif;
   font-size: 1.8rem;
-  margin-bottom: 15px;
+  color: #ff6f61;
+  margin-bottom: 5px;
+  position: relative;
 }
+
+.package .tag {
+  display: inline-block;
+  background-color: #5d2a8c;
+  color: #fff;
+  font-size: 0.9rem;
+  margin-left: 10px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 
 .package p strong {
   color: #a4508b; /* Mantener la consistencia en el color */
