@@ -139,8 +139,8 @@ body {
 }
 
 .package .bonus, .package .advantage {
-  background-color: #333; /* Fondo más oscuro para resaltar */
-  color: #ffffff; /* Texto blanco para buen contraste */
+  background-color: #333;
+  color: #ffffff;
   padding: 15px;
   border-radius: 8px;
   margin-top: 15px;
@@ -151,8 +151,9 @@ body {
 
 .package .bonus::before, .package .advantage::before {
   content: "⭐ ";
-  color: #ffdd57; /* Color dorado para el icono */
+  color: #ffdd57;
 }
+
 
 .package:hover {
   transform: translateY(-10px);
