@@ -64,6 +64,36 @@ body {
   color: #a4508b;
 }
 
+
+/* Logo en navbar */
+.logo-link {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.logo-img {
+  width: 40px;
+  height: auto;
+  margin-right: 10px;
+  animation: logo-bounce 2s infinite;
+}
+
+.logo-text {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  color: #a4508b;
+}
+
+/* Animación de salto para el logo */
+@keyframes logo-bounce {
+  0%, 100%   { transform: translateY(0); }
+  50%        { transform: translateY(-8px) scale(1.05); }
+}
+
+
+
+
 /* Encabezado */
 .header {
   background: linear-gradient(135deg, #2b1055, #5d2a8c);
@@ -328,6 +358,27 @@ body {
   padding: 20px;
   border-top: 1px solid #333;
 }
+
+
+/* Estilos para redes sociales */
+.socials {
+  margin-top: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: #e0e0e0;
+  margin: 0 8px;
+  font-size: 1.5rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.socials a:hover {
+  color: #a4508b;
+  transform: scale(1.2);
+}
+
+
 
 /* Animaciones */
 .slide-in {
