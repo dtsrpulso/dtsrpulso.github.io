@@ -352,7 +352,7 @@ body {
   background: #1c1c1e;
   border-radius: 20px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
-  width: 350px;
+  max-width: 350px;
   overflow: hidden;
   transform: translateY(0);
   transition: transform .3s ease, box-shadow .3s ease;
@@ -626,7 +626,7 @@ body {
 
 
 /* Ajuste del contenedor en pantallas pequeñas */
-@media (max-width: 500px) {
+@media (max-width: 910px) {
   .container {
     width: 100%;
     padding-left: 12px;
