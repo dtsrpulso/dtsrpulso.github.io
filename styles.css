@@ -666,7 +666,7 @@ body {
 
 
 /* Ajuste del contenedor en pantallas pequeñas */
-@media (max-width: 920px) {
+@media (min-width: 720px) and (max-width: 920px)  {
   .container {
     width: 100%;
     padding-left: 12px;
