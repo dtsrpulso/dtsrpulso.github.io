@@ -48,7 +48,7 @@ const observer = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.1 });
 
-const packages = document.querySelectorAll('.package');
+const packages = document.querySelectorAll('.package-card');
 packages.forEach(package => {
   observer.observe(package);
 });
