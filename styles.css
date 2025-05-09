@@ -352,7 +352,7 @@ body {
   background: #1c1c1e;
   border-radius: 20px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
-  max-width: 300px;
+  max-width: 350px;
   overflow: hidden;
   transform: translateY(0);
   transition: transform .3s ease, box-shadow .3s ease;
@@ -663,11 +663,43 @@ body {
   }
 }
 
-/* Ajuste del contenedor en pantallas pequeñas-medianas */
-@media (max-width: 910px) {
+
+
+/* Ajuste del contenedor en pantallas pequeñas */
+@media (max-width: 920px) {
+  .container {
+    width: 100%;
+    padding-left: 12px;
+    padding-right: 12px;
+    max-width: 60%;
+  }
 
   .packages--highlight {
     padding: 20px 20px;
+  }
+
+  .packages__inner {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .package-card {
+    width: 100%; /* tarjetas ocupan todo el ancho disponible */
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    box-sizing: border-box;
+  }
+
+  .package-card.featured {
+    transform: translateY(0) scale(1);
+  }
+
+  
+  .package-card.featured:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
   }
 }
 
