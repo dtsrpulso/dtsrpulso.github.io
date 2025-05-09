@@ -1,3 +1,23 @@
+// --- Navbar responsive hamburguesa ---
+const navToggle = document.getElementById('nav-toggle');
+const navLinks = document.getElementById('nav-links');
+
+navToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+  navToggle.classList.toggle('active');
+});
+
+// Cierra menú al hacer click en un link (opcional)
+navLinks.querySelectorAll('a').forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.classList.remove('open');
+    navToggle.classList.remove('active');
+  });
+});
+
+
+
+
 // Efecto visual al hacer clic en los botones
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(btn => {
@@ -93,3 +113,103 @@ function animate() {
 
 init();
 animate();
+
+
+
+
+
+
+
+document.querySelectorAll('.info-icon').forEach(icon => {
+  let tooltip = null;
+  let removeTimeout = null;
+  const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+  function hideTooltip() {
+    if (tooltip) {
+      tooltip.classList.remove('visible');
+      const t = tooltip;
+      tooltip = null;
+      t.addEventListener('transitionend', () => {
+        if (t.parentElement) t.parentElement.removeChild(t);
+      }, { once: true });
+      clearTimeout(removeTimeout);
+      removeTimeout = setTimeout(() => {
+        if (t.parentElement) t.parentElement.removeChild(t);
+      }, 50);
+      window.removeEventListener('scroll', hideTooltip);
+      window.removeEventListener('touchstart', outsideClickListener);
+      window.removeEventListener('click', outsideClickListener);
+    }
+  }
+
+  function outsideClickListener(e) {
+    if (tooltip && !tooltip.contains(e.target) && !e.target.closest('.info-icon')) {
+      hideTooltip();
+    }
+  }
+
+  function showTooltip(icon) {
+    const text = icon.getAttribute('data-tooltip');
+    if (!text) return;
+
+    hideTooltip();
+
+    tooltip = document.createElement('div');
+    tooltip.className = 'tooltip-fixed';
+    tooltip.textContent = text;
+    document.body.appendChild(tooltip);
+
+    const rect = icon.getBoundingClientRect();
+    const tooltipRect = tooltip.getBoundingClientRect();
+
+    let top = rect.top - tooltipRect.height - 10;
+    if (top < 10) top = rect.bottom + 10;
+
+    let left = rect.left + rect.width / 2 - tooltipRect.width / 2;
+    if (left < 10) left = 10;
+    if (left + tooltipRect.width > window.innerWidth - 10) {
+      left = window.innerWidth - tooltipRect.width - 10;
+    }
+
+    tooltip.style.top = `${top}px`;
+    tooltip.style.left = `${left}px`;
+
+    requestAnimationFrame(() => {
+      if (tooltip) tooltip.classList.add('visible');
+    });
+
+    window.addEventListener('scroll', hideTooltip);
+
+    // Diferencia: en táctil escucha también touchstart, en desktop solo click
+    if (isTouchDevice) {
+      window.addEventListener('touchstart', outsideClickListener);
+    } else {
+      window.addEventListener('click', outsideClickListener);
+    }
+  }
+
+  if (isTouchDevice) {
+    // En táctil: toggle tooltip con tap/click
+    icon.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      if (tooltip) {
+        hideTooltip();
+      } else {
+        showTooltip(icon);
+      }
+    });
+  } else {
+    // En desktop: hover clásico
+    icon.addEventListener('mouseenter', () => {
+      showTooltip(icon);
+    });
+    icon.addEventListener('mouseleave', () => {
+      hideTooltip();
+    });
+  }
+});
+
+
+

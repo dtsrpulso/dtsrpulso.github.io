@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>DTS Pulso Inc</title>
 
   <!-- Fuentes e Icons -->
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&family=Roboto:wght@300;400&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+  />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="assets/logo_pulso.png">
+  <link rel="icon" type="image/png" href="assets/logo_pulso.png" />
 
-  <link rel="stylesheet" href="styles.css">
-
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar">
     <div class="container">
       <a href="#" class="logo-link">
-        <img src="assets/logo_pulso.png" alt="Logo DTS Pulso Inc" class="logo-img">
+        <img src="assets/logo_pulso.png" alt="Logo DTS Pulso Inc" class="logo-img" />
         <span class="logo-text">DTS Pulso Inc</span>
       </a>
-      <ul class="nav-links">
+      <!-- Botón hamburguesa -->
+      <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about-us">Acerca de Nosotros</a></li>
+        <li><a href="#about">Nuestro Pulso</a></li>
         <li><a href="#packages">Paquetes</a></li>
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </div>
   </nav>
+
 
   <!-- Encabezado -->
   <header class="header">
@@ -46,76 +58,213 @@
   </div>
 
 
-  <!-- Seccion de Paquetes -->
-  <section id="packages" class="packages container">
-    <!-- Paquete Básico -->
-    <div class="package">
-      <h2>Plan Básico <span class="tag">Presencia Activa</span></h2>
-      <p class="networks"><strong>Manejo de:</strong> 1 red social</p>
-      <p><strong>Ideal para:</strong> Negocios que desean mantener sus perfiles activos y proyectar una imagen profesional sin complicaciones.</p>
-      <ul>
-        <li>1 visita presencial semanal para la creación de contenido</li>
-        <li>1 publicación semanal (4 al mes)</li>
-        <li>1 reel semanal (4 al mes)</li>
-        <li>6 historias semanales (24 al mes)</li>
-      </ul>
-      <p><strong>Inversión:</strong> $280,000 COP</p>
-      <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora o creación de redes sociales (primer mes).</p>
-      <p class="advantage"><strong>Ventaja:</strong> Mantén tu presencia activa con mínima inversión.</p>
-      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Basico%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
+
+
+
+  <!-- Sección Acerca de Nosotros -->
+  <section id="about-us" class="about-us">
+    <div class="container about-us__inner">
+      <div class="about-us__text">
+        <!-- Objetivo: Inspirar confianza y conectar emocionalmente con la historia, propósito y valores de la marca -->
+        <p class="section-lead"><em>Nuestra historia y propósito: el im-<strong>pulso</strong> que conecta marcas y personas.</em></p>
+        <h2>Acerca de Nosotros</h2>
+        <p>
+          Nacimos de una <strong>idea clara</strong>: ayudar a <strong>empresas y marcas que quieren crecer</strong>, pero no siempre tienen el <strong>tiempo</strong>, el <strong>equipo</strong> o la <strong>claridad</strong> para comunicar lo que las hace <strong>únicas</strong>.
+        </p>
+        <p>
+          Sabemos que <strong>destacar en el mundo digital</strong> exige más que presencia: necesitas <strong>intención</strong>, <strong>propósito</strong> y una <strong>voz auténtica</strong>.
+        </p>
+        <p>
+          Somos el <strong>equipo creativo y estratégico</strong> que da vida a <strong>DTS Pulso Inc</strong>. Más que un equipo externo, <strong>somos tus aliados</strong>: <strong>transformamos ideas en conexiones reales</strong> y <strong>marcas en historias que laten fuerte</strong>.
+        </p>
+        <p>
+          Por eso, nos convertimos en el <strong>pulso constante</strong> de tu marca, <strong>ocupándonos de cada detalle</strong> para que tu mensaje nunca deje de vibrar.
+        </p>
+        <p>
+          Creamos contenido con <strong>estrategia</strong>, <strong>creatividad</strong> y <strong>pasión</strong>, diseñado para <strong>cautivar</strong>, <strong>diferenciar</strong> y <strong>dejar huella</strong> en cada audiencia.
+        </p>
+        <p>
+          <strong>Tu historia merece ser el próximo gran impulso.</strong> ¿Listo para <strong>transformar tu comunicación</strong> y <strong>conquistar a quienes más importan</strong>?
+        </p>
+        <a href="#contact" class="btn btn-primary">¡Haz latir tu marca!</a>
+      </div>
+      <div class="about-us__image">
+        <img
+          src="assets/about_collage.jpg"
+          alt="Equipo creativo DTS Pulso Inc"
+          loading="lazy"
+        />
+      </div>
     </div>
-  
-    <!-- Paquete Intermedio -->
-    <div class="package">
-      <h2>Plan Intermedio <span class="tag">Crecimiento Constante</span></h2>
-      <p class="networks"><strong>Manejo de:</strong> 2 redes sociales</p>
-      <p><strong>Ideal para:</strong> Marcas que buscan aumentar su visibilidad, fortalecer su comunidad y conectar de forma constante con su audiencia.</p>
-      <ul>
-        <li>1 visita presencial semanal para la producción de contenido</li>
-        <li>2 publicaciones semanales (8 al mes)</li>
-        <li>2 reels por semana (8 al mes)</li>
-        <li>10 historias semanales (40 al mes)</li>
-        <li>Calendario editorial mensual</li>
-      </ul>
-      <p><strong>Inversión:</strong> $450,000 COP</p>
-      <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora o creación de redes sociales (primer mes).</p>
-      <p class="advantage"><strong>Ventaja:</strong> Ayuda a crear presencia sólida y constante.</p>
-      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Intermedio%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
-    </div>
-  
-    <!-- Paquete Premium -->
-    <div class="package">
-      <h2>Plan Premium <span class="tag">Impulso Estratégico</span></h2>
-      <p class="networks"><strong>Manejo de:</strong> 3 redes sociales</p>
-      <p><strong>Ideal para:</strong> Marcas que desean posicionarse como referentes, atraer clientes potenciales y profesionalizar su comunicación digital.</p>
-      <ul>
-        <li>1 o 2 visitas presenciales semanales (según resultados y necesidades desde el día 1)</li>
-        <li>3–4 publicaciones semanales (12–16 al mes)</li>
-        <li>2 reels semanales (8 al mes)</li>
-        <li>Historias diarias (mínimo 2 por día / 6 días a la semana)</li>
-        <li>Calendario y estrategia de contenido mensual</li>
-        <li>Análisis mensual con recomendaciones y mejoras continuas</li>
-      </ul>
-      <p><strong>Inversión:</strong> $700,000 COP</p>
-      <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora o creación de redes sociales (primer mes).</p>
-      <p class="advantage"><strong>Ventaja:</strong> Servicio completo y personalizado, ideal para marcas que quieren crecer en redes.</p>
-      <a href="https://api.whatsapp.com/send?phone=3502161217&text=Estoy%20interesado%20en%20el%20Paquete%20Premium%20para%20la%20gestion%20de%20redes%20sociales." class="btn" target="_blank">Contratar Ahora</a>
+  </section>
+
+  <!-- Sección Nuestro Pulso -->
+  <section id="about" class="pulse">
+    <div class="container pulse__inner">
+      <div class="pulse__image">
+        <img
+          src="assets/pulse_hand.jpg"
+          alt="Pulso de marca"
+          loading="lazy"
+        />
+      </div>
+      <div class="pulse__content">
+        <!-- Objetivo: Mostrar cómo trabajamos y qué nos hace únicos, destacando beneficios y motivando a la acción -->
+        <p class="section-lead"><em>¿Por qué elegir nuestro im-<strong>pulso</strong>? Ventajas únicas y soluciones personalizadas para tu marca.</em></p>
+        <h2>Somos el im-<strong class="subtitle">pulso</strong> que tu marca necesita</h2>
+        <p class="subtitle">
+          Comunicación estratégica que conecta e impulsa tu crecimiento
+        </p>
+        <p>
+          En DTS Pulso Inc, somos la nueva generación de aliados digitales. Nacimos para impulsar a empresas como la tuya, fusionando creatividad, análisis y una energía imparable. 
+          <br><br>
+          Entendemos que tu marca es única. Por eso, te acompañamos con soluciones hechas a la medida para que destaques y conectes auténticamente con tu audiencia.
+        </p>
+        <ul class="pulse__list">
+          <li>
+            <strong>Soluciones personalizadas:</strong> Creamos contenido que habla el idioma de tu industria y tu audiencia.
+          </li>
+          <li>
+            <strong>Agilidad que se nota:</strong> Flexibles, rápidos y en constante evolución contigo.
+          </li>
+          <li>
+            <strong>Acompañamiento real:</strong> Siempre cerca, listos para apoyarte cuando más lo necesites.
+          </li>
+          <li>
+            <strong>Pasión y cercanía:</strong> Equipo humano, motivado y lleno de ideas frescas para tu marca.
+          </li>
+        </ul>
+        <p>
+          ¡Dale a tu empresa el impulso que merece! Descubre cómo podemos crecer juntos.
+        </p>
+        <a href="#packages" class="btn btn-secondary">Ver Paquetes</a>
+      </div>
     </div>
   </section>
 
 
 
+  <!-- Sección de Paquetes -->
+  <section id="packages" class="packages packages--highlight">
+  <div class="container packages__inner">
+
+    <!-- Paquete Básico -->
+    <div class="package-card">
+      <div class="card-header">
+        <h3>Plan Básico</h3>
+        <span class="tag">Presencia Activa</span>
+        <span class="info-icon" data-tooltip="Ideal para negocios que desean mantener sus perfiles activos y proyectar una imagen profesional sin complicaciones.">
+          <i class="fas fa-info-circle"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="networks"><strong>1 red social</strong></p>
+        <ul>
+          <li>1 visita presencial semanal</li>
+          <li>1 publicación semanal</li>
+          <li>1 reel semanal</li>
+          <li>6 historias semanales</li>
+        </ul>
+        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+        <p class="advantage"><strong>Ventaja:</strong> Mantén tu presencia activa con mínima inversión.</p>
+      </div>
+      <div class="card-footer">
+        <p class="price">$ 280.000&nbsp;COP</p>
+        <a href="#" class="btn btn-sm">Contratar</a>
+      </div>
+    </div>
+
+    <!-- Paquete Intermedio (destacado) -->
+    <div class="package-card featured">
+      <div class="card-header">
+
+        
+        <!-- Tag de descuento -->
+        <span class="ribbon">10% OFF</span>
+
+        <h3>Plan Intermedio</h3>
+        <span class="tag">Crecimiento Constante</span>
+        <span class="info-icon" data-tooltip="Ideal para marcas que buscan aumentar su visibilidad, fortalecer su comunidad y conectar de forma constante con su audiencia.">
+          <i class="fas fa-info-circle"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="networks"><strong>2 redes sociales</strong></p>
+        <ul>
+          <li>1 visita presencial semanal</li>
+          <li>2 publicaciones semanales</li>
+          <li>2 reels semanales</li>
+          <li>10 historias semanales</li>
+          <li>Calendario editorial mensual</li>
+        </ul>
+        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+        <p class="advantage"><strong>Ventaja:</strong> Crea una presencia sólida y constante.</p>
+      </div>
+      <div class="card-footer">
+        <p class="price">
+          <span class="old-price">$ 499.900&nbsp;COP</span>
+          <span class="new-price">$ 449.900&nbsp;COP</span>
+        </p>
+        <p class="tag">¡Ahorra $50.000 COP!</p>
+        <a href="#" class="btn btn-sm">Contratar</a>
+      </div>
+    </div>
+
+    <!-- Paquete Premium -->
+    <div class="package-card">
+      <div class="card-header">
+
+        <!-- Tag de descuento -->
+        <span class="ribbon">20% OFF</span>
+
+        <h3>Plan Premium</h3>
+        <span class="tag">Impulso Estratégico</span>
+        <span class="info-icon" data-tooltip="Ideal para marcas que desean posicionarse como referentes, atraer clientes potenciales y profesionalizar su comunicación digital.">
+          <i class="fas fa-info-circle"></i>
+        </span>
+      </div>
+      <div class="card-body">
+        <p class="networks"><strong>3 redes sociales</strong></p>
+        <ul>
+          <li>1–2 visitas semanales</li>
+          <li>3–4 publicaciones semanales</li>
+          <li>2 reels semanales</li>
+          <li>Historias diarias</li>
+          <li>Estrategia y análisis mensual</li>
+        </ul>
+        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+        <p class="advantage"><strong>Ventaja:</strong> Servicio completo y personalizado, ideal para marcas que quieren crecer en redes.</p>
+      </div>
+      <div class="card-footer">
+        <p class="price">
+          <span class="old-price">$ 839.900&nbsp;COP</span>
+          <span class="new-price">$ 699.900&nbsp;COP</span>
+        </p>
+        <p class="tag">¡Ahorra $140.000 COP!</p>
+        <a href="#" class="btn btn-sm">Contratar</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
-
-
-  <!-- Seccion de Contacto -->
+  <!-- Sección Contacto -->
   <section id="contact" class="contact container">
-    <h2>Contacto</h2>
-    <p>¿Tienes dudas o necesitas más información? Completa el formulario para enviarnos un mensaje directo por WhatsApp.</p>
+    <h2>¡Hablemos!</h2>
+    <p>
+      ¿Quieres impulsar tu marca o tienes alguna duda? <strong>Da el paso y lleva tu marca al siguiente nivel.</strong><br>
+      Completa el formulario o escríbenos por WhatsApp; nuestro equipo te responderá muy pronto.<br>
+      <span class="contact-highlight">Estamos listos para ser el pulso de tu marca.</span>
+    </p>
     <form id="contactForm">
-      <textarea id="userMessage" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <textarea
+        id="userMessage"
+        placeholder="Cuéntanos cómo podemos ayudarte..."
+        required
+        rows="5"
+        aria-label="Mensaje para DTS Pulso Inc"
+      ></textarea>
       <button type="submit" class="btn">Enviar Mensaje</button>
     </form>
   </section>
@@ -124,21 +273,25 @@
   <footer class="footer">
     <div class="container">
       <div class="socials">
-        <a href="https://www.instagram.com/pulso.inc?igsh=MWxtd3V1bmxiZW9obw%3D%3D&utm_source=qr"
-           target="_blank" aria-label="Instagram">
-          <i class="fab fa-instagram"></i>
-        </a>
-        <a href="https://www.instagram.com/pulso.inc?igsh=MWxtd3V1bmxiZW9obw%3D%3D&utm_source=qr"
-           target="_blank" aria-label="TikTok">
-          <i class="fab fa-tiktok"></i>
-        </a>
+        <a
+          href="https://www.instagram.com/pulso.inc?igsh=MWxtd3V1bmxiZW9obw%3D%3D&utm_source=qr"
+          target="_blank"
+          aria-label="Instagram"
+          ><i class="fab fa-instagram"></i
+        ></a>
+        <a
+          href="https://www.instagram.com/pulso.inc?igsh=MWxtd3V1bmxiZW9obw%3D%3D&utm_source=qr"
+          target="_blank"
+          aria-label="TikTok"
+          ><i class="fab fa-tiktok"></i
+        ></a>
       </div>
-      
+
       <p>&copy; 2025 DTS Pulso Inc. Todos los derechos reservados.</p>
     </div>
   </footer>
 
-  <!-- JavaScript para interactividad extra -->
+  <!-- JavaScript -->
   <script src="scripts.js"></script>
 </body>
 </html>
