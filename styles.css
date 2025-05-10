@@ -60,11 +60,11 @@ body {
 }
 
 .pulse-animation {
-  animation: logo-pulse 2s infinite ease-in-out;
+  animation: pulse 2s infinite ease-in-out;
 }
 
 /* Después */
-@keyframes logo-pulse {
+@keyframes pulse {
   0%, 100% {
     transform: scale(1);
     filter: drop-shadow(0 0 0 rgba(164, 80, 139, 0));
