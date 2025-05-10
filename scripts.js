@@ -32,7 +32,7 @@ const contactForm = document.getElementById('contactForm');
 contactForm.addEventListener('submit', function(e) {
   e.preventDefault();
   const userMessage = document.getElementById('userMessage').value;
-  const baseUrl = 'https://api.whatsapp.com/send?phone=3502161217&text=';
+  const baseUrl = 'https://api.whatsapp.com/send?phone=3019566035&text=';
   const message = encodeURIComponent('¡Hola! Me gustaría saber más. \n' + userMessage);
   window.open(baseUrl + message, '_blank');
 });
