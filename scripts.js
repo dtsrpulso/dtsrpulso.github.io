@@ -213,3 +213,75 @@ document.querySelectorAll('.info-icon').forEach(icon => {
 
 
 
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a');
+
+  function activateNavLink() {
+    let scrollPos = window.scrollY || window.pageYOffset;
+
+    sections.forEach(section => {
+      const top = section.offsetTop - 120;
+      const bottom = top + section.offsetHeight;
+      const id = section.getAttribute('id');
+      if (scrollPos >= top && scrollPos < bottom) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }
+
+  window.addEventListener('scroll', activateNavLink);
+  activateNavLink();
+});
+
+
+
+
+
+const fadeObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('fade-in');
+    } else {
+      entry.target.classList.remove('fade-in');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.testimonials-list blockquote, .client-logos img').forEach(el => {
+  fadeObserver.observe(el);
+});
+
+
+
+
+
+
+const imgObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      if (entry.target.classList.contains('fade-right')) {
+        entry.target.classList.add('fade-in-right');
+        entry.target.classList.remove('fade-in-left');
+      }
+      if (entry.target.classList.contains('fade-left')) {
+        entry.target.classList.add('fade-in-left');
+        entry.target.classList.remove('fade-in-right');
+      }
+    } else {
+      entry.target.classList.remove('fade-in-right');
+      entry.target.classList.remove('fade-in-left');
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.fade-right, .fade-left').forEach(img => {
+  imgObserver.observe(img);
+});

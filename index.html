@@ -36,6 +36,7 @@
         <li><a href="#about-us">Acerca de Nosotros</a></li>
         <li><a href="#about">Nuestro Pulso</a></li>
         <li><a href="#packages">Paquetes</a></li>
+        <!--li><a href="#testimonials">Testimonios</a></li-->
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </div>
@@ -46,7 +47,8 @@
   <header class="header">
     <div class="container">
       <h1>La frecuencia exacta entre tu marca y tú comunidad</h1>
-      <p>Impulsa tu marca al siguiente nivel digital.</p>
+      <a href="#contact" class="btn btn-primary pulse-animation">Solicita tu im-pulso digital</a>
+      <p><em>Impulsa tu marca al siguiente nivel digital.</em></p>
       <canvas id="particles"></canvas>
     </div>
   </header>
@@ -69,6 +71,14 @@
         <p class="section-lead"><em>Nuestra historia y propósito: el im-<strong>pulso</strong> que conecta marcas y personas.</em></p>
         <h2>Acerca de Nosotros</h2>
         <p>
+          
+          <span class="icon-about">
+            <svg width="60" height="18" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <polyline points="0,16 10,16 18,6 26,26 38,12 44,18 54,12 60,28 70,4 80,20 90,12 98,30 110,4 120,16"
+                stroke="#a4508b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
+
           Nacimos de una <strong>idea clara</strong>: ayudar a <strong>empresas y marcas que quieren crecer</strong>, pero no siempre tienen el <strong>tiempo</strong>, el <strong>equipo</strong> o la <strong>claridad</strong> para comunicar lo que las hace <strong>únicas</strong>.
         </p>
         <p>
@@ -90,6 +100,7 @@
       </div>
       <div class="about-us__image">
         <img
+          class="fade-right"
           src="assets/about_collage.jpg"
           alt="Equipo creativo DTS Pulso Inc"
           loading="lazy"
@@ -103,6 +114,7 @@
     <div class="container pulse__inner">
       <div class="pulse__image">
         <img
+          class="fade-left"
           src="assets/pulse_hand.jpg"
           alt="Pulso de marca"
           loading="lazy"
@@ -143,109 +155,148 @@
   </section>
 
 
-
   <!-- Sección de Paquetes -->
   <section id="packages" class="packages packages--highlight">
-  <div class="container packages__inner">
+    <div class="container packages__inner">
 
-    <!-- Paquete Básico -->
-    <div class="package-card">
-      <div class="card-header">
-        <h3>Plan Básico</h3>
-        <span class="tag">Presencia Activa</span>
-        <span class="info-icon" data-tooltip="Ideal para negocios que desean mantener sus perfiles activos y proyectar una imagen profesional sin complicaciones.">
-          <i class="fas fa-info-circle"></i>
-        </span>
+      <!-- Paquete Básico -->
+      <div class="package-card">
+        <div class="card-header">
+          <h3>Plan Básico</h3>
+          <span class="tag">Presencia Activa</span>
+          <span class="info-icon" data-tooltip="Ideal para negocios que desean mantener sus perfiles activos y proyectar una imagen profesional sin complicaciones.">
+            <i class="fas fa-info-circle"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <p class="networks"><strong>1 red social</strong></p>
+          <ul>
+            <li>1 visita presencial semanal</li>
+            <li>1 publicación semanal</li>
+            <li>1 reel semanal</li>
+            <li>6 historias semanales</li>
+          </ul>
+          <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+          <p class="advantage"><strong>Ventaja:</strong> Mantén tu presencia activa con mínima inversión.</p>
+        </div>
+        <div class="card-footer">
+          <p class="price">$ 280.000&nbsp;COP</p>
+          <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Basico%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
+        </div>
       </div>
-      <div class="card-body">
-        <p class="networks"><strong>1 red social</strong></p>
-        <ul>
-          <li>1 visita presencial semanal</li>
-          <li>1 publicación semanal</li>
-          <li>1 reel semanal</li>
-          <li>6 historias semanales</li>
-        </ul>
-        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
-        <p class="advantage"><strong>Ventaja:</strong> Mantén tu presencia activa con mínima inversión.</p>
+
+      <!-- Paquete Intermedio (destacado) -->
+      <div class="package-card featured">
+        <div class="card-header">
+
+
+          <!-- Tag de descuento -->
+          <span class="ribbon">10% OFF</span>
+
+          <h3>Plan Intermedio</h3>
+          <span class="tag">Crecimiento Constante</span>
+          <span class="info-icon" data-tooltip="Ideal para marcas que buscan aumentar su visibilidad, fortalecer su comunidad y conectar de forma constante con su audiencia.">
+            <i class="fas fa-info-circle"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <p class="networks"><strong>2 redes sociales</strong></p>
+          <ul>
+            <li>1 visita presencial semanal</li>
+            <li>2 publicaciones semanales</li>
+            <li>2 reels semanales</li>
+            <li>10 historias semanales</li>
+            <li>Calendario editorial mensual</li>
+          </ul>
+          <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+          <p class="advantage"><strong>Ventaja:</strong> Crea una presencia sólida y constante.</p>
+        </div>
+        <div class="card-footer">
+          <p class="price">
+            <span class="old-price">$ 499.900&nbsp;COP</span>
+            <span class="new-price">$ 449.900&nbsp;COP</span>
+          </p>
+          <p class="tag">¡Ahorra $50.000 COP!</p>
+          <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Intermedio%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
+        </div>
       </div>
-      <div class="card-footer">
-        <p class="price">$ 280.000&nbsp;COP</p>
-        <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Basico%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
+
+      <!-- Paquete Premium -->
+      <div class="package-card">
+        <div class="card-header">
+
+          <!-- Tag de descuento -->
+          <span class="ribbon">20% OFF</span>
+
+          <h3>Plan Premium</h3>
+          <span class="tag">Impulso Estratégico</span>
+          <span class="info-icon" data-tooltip="Ideal para marcas que desean posicionarse como referentes, atraer clientes potenciales y profesionalizar su comunicación digital.">
+            <i class="fas fa-info-circle"></i>
+          </span>
+        </div>
+        <div class="card-body">
+          <p class="networks"><strong>3 redes sociales</strong></p>
+          <ul>
+            <li>1–2 visitas semanales</li>
+            <li>3–4 publicaciones semanales</li>
+            <li>2 reels semanales</li>
+            <li>Historias diarias</li>
+            <li>Estrategia y análisis mensual</li>
+          </ul>
+          <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
+          <p class="advantage"><strong>Ventaja:</strong> Servicio completo y personalizado, ideal para marcas que quieren crecer en redes.</p>
+        </div>
+        <div class="card-footer">
+          <p class="price">
+            <span class="old-price">$ 839.900&nbsp;COP</span>
+            <span class="new-price">$ 699.900&nbsp;COP</span>
+          </p>
+          <p class="tag">¡Ahorra $140.000 COP!</p>
+          <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Premium%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
+        </div>
       </div>
     </div>
+  </section>
 
-    <!-- Paquete Intermedio (destacado) -->
-    <div class="package-card featured">
-      <div class="card-header">
 
-        
-        <!-- Tag de descuento -->
-        <span class="ribbon">10% OFF</span>
 
-        <h3>Plan Intermedio</h3>
-        <span class="tag">Crecimiento Constante</span>
-        <span class="info-icon" data-tooltip="Ideal para marcas que buscan aumentar su visibilidad, fortalecer su comunidad y conectar de forma constante con su audiencia.">
-          <i class="fas fa-info-circle"></i>
-        </span>
-      </div>
-      <div class="card-body">
-        <p class="networks"><strong>2 redes sociales</strong></p>
-        <ul>
-          <li>1 visita presencial semanal</li>
-          <li>2 publicaciones semanales</li>
-          <li>2 reels semanales</li>
-          <li>10 historias semanales</li>
-          <li>Calendario editorial mensual</li>
-        </ul>
-        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
-        <p class="advantage"><strong>Ventaja:</strong> Crea una presencia sólida y constante.</p>
-      </div>
-      <div class="card-footer">
-        <p class="price">
-          <span class="old-price">$ 499.900&nbsp;COP</span>
-          <span class="new-price">$ 449.900&nbsp;COP</span>
-        </p>
-        <p class="tag">¡Ahorra $50.000 COP!</p>
-        <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Intermedio%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
-      </div>
+
+
+  <!-- Sección de Testimonios -->
+  <!--section id="testimonials" class="testimonials">
+    <h2 class="testimonials-title">Testimonios</h2>
+    <div class="testimonials-list">
+      <blockquote>
+        <p>"El equipo de Pulso Inc nos ayudó a duplicar nuestra comunidad en solo 3 meses. ¡Superaron nuestras expectativas!"</p>
+        <footer>– Ana Torres, CEO de MarcaX</footer>
+      </blockquote>
+      <blockquote>
+        <p>"¡Increíble atención y resultados! Ahora tenemos una imagen digital profesional y cercana."</p>
+        <footer>– Carlos Pérez, Gerente de TiendaY</footer>
+      </blockquote>
+      <blockquote>
+        <p>"Su estrategia de contenidos hizo que nuestros seguidores participen mucho más. 100% recomendados."</p>
+        <footer>– Laura Gómez, CMO de StartupZ</footer>
+      </blockquote>
     </div>
-
-    <!-- Paquete Premium -->
-    <div class="package-card">
-      <div class="card-header">
-
-        <!-- Tag de descuento -->
-        <span class="ribbon">20% OFF</span>
-
-        <h3>Plan Premium</h3>
-        <span class="tag">Impulso Estratégico</span>
-        <span class="info-icon" data-tooltip="Ideal para marcas que desean posicionarse como referentes, atraer clientes potenciales y profesionalizar su comunicación digital.">
-          <i class="fas fa-info-circle"></i>
-        </span>
-      </div>
-      <div class="card-body">
-        <p class="networks"><strong>3 redes sociales</strong></p>
-        <ul>
-          <li>1–2 visitas semanales</li>
-          <li>3–4 publicaciones semanales</li>
-          <li>2 reels semanales</li>
-          <li>Historias diarias</li>
-          <li>Estrategia y análisis mensual</li>
-        </ul>
-        <p class="bonus"><strong>Bonus:</strong> Auditoría y mejora/creación de redes sociales (primer mes).</p>
-        <p class="advantage"><strong>Ventaja:</strong> Servicio completo y personalizado, ideal para marcas que quieren crecer en redes.</p>
-      </div>
-      <div class="card-footer">
-        <p class="price">
-          <span class="old-price">$ 839.900&nbsp;COP</span>
-          <span class="new-price">$ 699.900&nbsp;COP</span>
-        </p>
-        <p class="tag">¡Ahorra $140.000 COP!</p>
-        <a href="https://api.whatsapp.com/send?phone=3019566035&text=Estoy%20interesado%20en%20el%20Paquete%20Premium%20para%20la%20gestion%20de%20redes%20sociales." target="_blank" rel="noopener noreferrer" class="btn btn-sm">Contratar</a>
-      </div>
+    <div class="client-logos">
+      <img src="assets/logo_pulso.png" alt="MarcaX" loading="lazy">
+      <img src="assets/logo_pulso.png" alt="TiendaY" loading="lazy">
+      <img src="assets/logo_pulso.png" alt="StartupZ" loading="lazy">
     </div>
-  </div>
-</section>
+  </section>
+
+
+
+
+
+  <div class="micro-cta">
+    <h3>¿Listo para crecer?</h3>
+    <a href="#packages" class="btn btn-sm">Descubre nuestros paquetes</a>
+  </div-->
+
+
+
 
 
 
@@ -272,6 +323,14 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
+
+      <a href=""#about-us class="footer-watermark">
+        <svg width="120" height="32" viewBox="0 0 120 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <polyline points="0,16 10,16 18,6 26,26 38,12 44,18 54,12 60,28 70,4 80,20 90,12 98,30 110,4 120,16"
+            stroke="#a4508b" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
       <div class="socials">
         <a
           href="https://www.instagram.com/pulso.inc?igsh=MWxtd3V1bmxiZW9obw%3D%3D&utm_source=qr"
