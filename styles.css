@@ -252,8 +252,7 @@ section {
 
 .scroll-indicator {
   text-align: center;
-  margin-top: -25px;
-  margin-bottom: 30px;
+  margin: -20px 0;
   color: #ffffff;
   font-size: 1rem;
   position: relative;
